@@ -1,44 +1,50 @@
-/* styles.css */
 
+/* Estilos generales del cuerpo del documento */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  nav {
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #f0f0f0; 
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+}
+
+/* Estilos para la barra de navegación */
+nav {
     background-color: #ddd;
-    padding: 5px;
-  }
-  
-  main {
+    padding: 5px; 
+}
+
+/* Estilos para el contenido principal */
+main {
     padding: 20px;
-  }
-  
-  h1 {
-    margin: 0;
-  }
-  
-  article {
-    margin-bottom: 20px;
-  }
-  
-  ul {
-    list-style-type: disc;
-  }
-  
-  footer {
-    background-color: #444;
-    color: white;
-    text-align: center;
-    padding: 10px;
-  }
-  
+}
+
+/* Estilos para el título de nivel 1 (h1) */
+h1 {
+    margin: 0; 
+}
+
+/* Estilos para los artículos */
+article {
+    margin-bottom: 20px; 
+}
+
+/* Estilos para las listas no ordenadas */
+ul {
+    list-style-type: disc; 
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #444; 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+}
