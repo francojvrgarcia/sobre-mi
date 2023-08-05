@@ -62,8 +62,8 @@ Si deseas realizar una nueva operación, puedes hacer clic en el botón "Borrar"
    - Resultado obtenido: Mensaje de error "Error: Ingresa valores numéricos válidos en ambos operandos."
 
 7. Números demasiado grandes: 1e100 + 1e100
-   - Resultado esperado: Mensaje de error "Error: El resultado es demasiado grande o pequeño."
-   - Resultado obtenido: Mensaje de error "Error: El resultado es demasiado grande o pequeño."
+   - Resultado esperado: Mensaje de error "Error: El resultado es demasiado grande."
+   - Resultado obtenido: Mensaje de error "Error: El resultado es demasiado grande."
 
 8. Números demasiado pequeños: 1 / 1e20
    - Resultado esperado: Mensaje de error "Error: El resultado es demasiado pequeño."
