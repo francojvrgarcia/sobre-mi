@@ -20,11 +20,13 @@ function division(operando1, operando2) {
 
 // Función para validar los operandos
 function validarOperandos(operando1, operando2) {
-    if (isNaN(operando1) || isNaN(operando2)) {
+    if ( (isNaN(operando1) || isNaN(operando2))) {
         return false;
     }
     return true;
 }
+
+
 
 // Función para realizar el cálculo según la operación seleccionada
 function calcular() {
@@ -36,7 +38,7 @@ function calcular() {
     if (!validarOperandos(operando1, operando2)) {
 		document.getElementById('resultado').style.color = 'red';
         document.getElementById('resultado').textContent = 'Error: Ingresa valores numéricos válidos en ambos operandos.';
-        return;
+        return false;
     }
 
     switch (operador) {
@@ -88,3 +90,34 @@ function limpiarCampos() {
     document.getElementById('operando2').value = '';
     document.getElementById('resultado').textContent = 'Resultado: ';
 }
+
+
+
+function esNumero(valor) {
+    return !isNaN(parseFloat(valor)) && isFinite(valor);
+}
+
+function validarInput(inputElement) {
+    const valor = inputElement.value;
+    if (!esNumero(valor)) {
+        inputElement.classList.add('invalid');
+        document.getElementById('resultado').style.color = 'red';
+        document.getElementById('resultado').textContent = 'Error: Se deben ingresar valores numéricos.';
+    } else {
+        inputElement.classList.remove('invalid');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+ 
+    const operando1Input = document.getElementById('operando1');
+    const operando2Input = document.getElementById('operando2');
+
+    operando1Input.addEventListener('input', function () {
+        validarInput(operando1Input);
+    });
+
+    operando2Input.addEventListener('input', function () {
+        validarInput(operando2Input);
+    });
+});

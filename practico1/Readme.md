@@ -37,6 +37,9 @@ Si deseas realizar una nueva operación, puedes hacer clic en el botón "Borrar"
 
 ## Casos de prueba
 
+Límite predefinido para el resultado máximo 10000000
+Límite predefinido para el resultado mínimo 0.0000000000000000001
+
 1. Suma: 3 + 5
    - Resultado esperado: 8
    - Resultado obtenido: 8
