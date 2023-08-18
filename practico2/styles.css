@@ -1,3 +1,22 @@
 body {
     background-color: #f8f9fa;
   }
+  
+.container {
+    margin-top: 20px;
+}
+  
+.btn {
+    margin-top: 10px;
+}
+  
+@media (max-width: 576px) {
+    /* Estilos para pantallas pequeñas */
+    .container {
+      margin-top: 40px;
+    }
+  
+    .btn {
+      margin-top: 10px;
+    }
+}

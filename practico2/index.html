@@ -10,17 +10,18 @@
   <div class="container text-center">
     <h1 class="my-4">Juego de piedra, papel o tijera</h1>
     <div class="row">
-      <div class="col-md-6 offset-md-3">
+      <div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1">
         <label for="nombreJugador">Ingresa tu nombre:</label>
         <input type="text" id="nombreJugador" class="form-control mb-3">
-        <p>Elige la cantidad de jugadas:</p>
+        <label for="numJugadas">Elige la cantidad de jugadas:</label>
         <input type="number" id="numJugadas" class="form-control mb-3" min="1" max="3">
-        <button id="startButton" class="btn btn-primary">Comenzar</button>
-        <button id="resetButton" class="btn btn-secondary">Reiniciar Juego</button>
+        <button id="startButton" class="btn btn-primary btn-block">Comenzar</button>
+        <button id="resetButton" class="btn btn-secondary btn-block mt-3">Reiniciar Juego</button>
       </div>
     </div>
     <div id="resultados" class="mt-4"></div>
   </div>
+
 
   <div class="modal fade" id="jugadaModal" tabindex="-1" aria-labelledby="jugadaModalLabel" aria-hidden="true">
     <div class="modal-dialog">
