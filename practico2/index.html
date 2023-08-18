@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Juego de piedra, papel o tijera</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container text-center">
+    <h1 class="my-4">Juego de piedra, papel o tijera</h1>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <label for="nombreJugador">Ingresa tu nombre:</label>
+        <input type="text" id="nombreJugador" class="form-control mb-3">
+        <p>Elige la cantidad de jugadas:</p>
+        <input type="number" id="numJugadas" class="form-control mb-3" min="1" max="3">
+        <button id="startButton" class="btn btn-primary">Comenzar</button>
+        <button id="resetButton" class="btn btn-secondary">Reiniciar Juego</button>
+      </div>
+    </div>
+    <div id="resultados" class="mt-4"></div>
+  </div>
+
+  <div class="modal fade" id="jugadaModal" tabindex="-1" aria-labelledby="jugadaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="jugadaModalLabel">Elige tu jugada</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Selecciona una opción:</p>
+          <button class="btn btn-secondary optionButton" data-choice="piedra">
+            <i class="fas fa-hand-rock"></i> Piedra
+          </button>
+          <button class="btn btn-secondary optionButton" data-choice="papel">
+            <i class="fas fa-hand-paper"></i> Papel
+          </button>
+          <button class="btn btn-secondary optionButton" data-choice="tijera">
+            <i class="fas fa-hand-scissors"></i> Tijera
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
