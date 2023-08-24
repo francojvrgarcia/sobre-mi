@@ -20,6 +20,8 @@ optionButtons.forEach((button, index) => {
     const resultado = determinarGanador(opciones.indexOf(jugadaComputadora), index);
 
     const resultadoDiv = document.createElement('div');
+    resultadoDiv.classList.add('resultado-jugada');
+
     resultadoDiv.innerHTML = `
       <p>Jugada ${jugadasRealizadas + 1}:</p>
       <p>${nombreJugador} eligió: ${jugadaJugador}</p>
@@ -36,6 +38,7 @@ optionButtons.forEach((button, index) => {
     }
 
     resultadosDiv.appendChild(resultadoDiv);
+    resultadosDiv.scrollTop = resultadosDiv.scrollHeight;
 
     jugadasRealizadas++;
 
@@ -48,6 +51,7 @@ optionButtons.forEach((button, index) => {
         <p>Empates: ${empates} jugada(s)</p>
       `;
       resultadosDiv.appendChild(resultadosFinalesDiv);
+      resultadosDiv.scrollTop = resultadosDiv.scrollHeight;
       jugadaModal.hide();
     } else {
       jugadaModal.show();
@@ -64,8 +68,8 @@ document.getElementById('startButton').addEventListener('click', () => {
     return;
   }
 
-  if (isNaN(numJugadas) || numJugadas < 1 || numJugadas > 3) {
-    alert('Cantidad de jugadas inválida. Debes ingresar un número válido (1, 2 o 3).');
+  if (isNaN(numJugadas) || numJugadas < 1 || numJugadas > 5) {
+    alert('Cantidad de jugadas inválida. Debes ingresar un número válido (1, 2, 3, 4, o 5).');
     return;
   }
 
