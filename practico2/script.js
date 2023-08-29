@@ -9,6 +9,7 @@ let ganadorJugador = 0;
 let empates = 0;
 let jugadasRealizadas = 0;
 
+const opcionesElement = document.getElementById('opciones');
 const resultadosDiv = document.getElementById('resultados');
 const jugadaModal = new bootstrap.Modal(document.getElementById('jugadaModal'));
 
@@ -52,7 +53,8 @@ optionButtons.forEach((button, index) => {
       `;
       resultadosDiv.appendChild(resultadosFinalesDiv);
       resultadosDiv.scrollTop = resultadosDiv.scrollHeight;
-      jugadaModal.hide();
+      opcionesElement.style.display = 'none';
+      //jugadaModal.hide();
     } else {
       jugadaModal.show();
     }
@@ -60,6 +62,7 @@ optionButtons.forEach((button, index) => {
 });
 
 document.getElementById('startButton').addEventListener('click', () => {
+  opcionesElement.style.display = 'block';
   nombreJugador = document.getElementById('nombreJugador').value.trim();
   numJugadas = parseInt(document.getElementById('numJugadas').value);
 
