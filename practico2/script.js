@@ -24,11 +24,13 @@ optionButtons.forEach((button, index) => {
     resultadoDiv.classList.add('resultado-jugada');
 
     resultadoDiv.innerHTML = `
-      <p>Jugada ${jugadasRealizadas + 1}:</p>
-      <p>${nombreJugador} eligió: ${jugadaJugador}</p>
-      <p>La computadora eligió: ${jugadaComputadora}</p>
-      <p>El resultado fue: ${resultado}</p>
-    `;
+    <div id="resultados">
+      <p class="jugada-numero">Jugada ${jugadasRealizadas + 1}:</p>
+      <p class="jugada-info">${nombreJugador} eligió: ${jugadaJugador}</p>
+      <p class="jugada-info">La computadora eligió: ${jugadaComputadora}</p>
+      <p class="jugada-info">El resultado fue: <span class="${resultado === 'Ganaste' ? 'ganador' : 'perdedor'}">${resultado}</span></p>
+    </div>
+  `;
 
     if (resultado === resultados[1]) {
       ganadorComputadora++;
@@ -46,11 +48,13 @@ optionButtons.forEach((button, index) => {
     if (jugadasRealizadas === numJugadas) {
       const resultadosFinalesDiv = document.createElement('div');
       resultadosFinalesDiv.innerHTML = `
+      <div id="resultados-finales">
         <h2>Resultados finales</h2>
-        <p>Computadora: ${ganadorComputadora} jugada(s) ganada(s)</p>
-        <p>${nombreJugador}: ${ganadorJugador} jugada(s) ganada(s)</p>
-        <p>Empates: ${empates} jugada(s)</p>
-      `;
+        <p class="resultado-final">Computadora: ${ganadorComputadora} jugada(s) ganada(s)</p>
+        <p class="resultado-final">${nombreJugador}: ${ganadorJugador} jugada(s) ganada(s)</p>
+        <p class="resultado-final">Empates: ${empates} jugada(s)</p>
+      </div>
+    `;
       resultadosDiv.appendChild(resultadosFinalesDiv);
       resultadosDiv.scrollTop = resultadosDiv.scrollHeight;
       opcionesElement.style.display = 'none';
